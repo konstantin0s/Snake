@@ -150,3 +150,17 @@ Snake.prototype.draw = function() {
    }
    return wallCollision || selfCollision;
  };
+
+ //Set the snake's next direction based on the keyboard
+ Snake.prototype.setDirection = function(newDirection) {
+   if (this.diection === "up" && newDirection === "down") {
+     return;
+   } else if (this.direction === "right" && newDirection === "left") {
+     return;
+   } else if (this.direction === "down" && newDirection === "up") {
+     return;
+   } else if (this.direction === "left" && newDirection === "right") {
+     return;
+   }
+   this.newDirection = newDirection;
+ }

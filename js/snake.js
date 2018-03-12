@@ -79,3 +79,17 @@ Block.prototype.drawCircle = function(color) {
 Block.prototype.equal = function(otherBlock) {
   return this.col === otherBlock.col && this.row === otherBlock.row;
 };
+
+//The snake constructor
+var Snake = function() {
+  this.segments = [
+    new Block(7, 5),
+    new Block(6, 5),
+    new Block(5, 5)
+  ];
+
+  this.direction = "right";
+  this.nextDirection = "right"
+};
+
+//Draw a square for each segment of the snake's body

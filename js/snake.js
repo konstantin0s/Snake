@@ -18,3 +18,11 @@ var drawBorder = function() {
   ctx.fillRect(0, 0, blockSize, height);
   ctx.fillRect(width - blockSize, 0, blockSize, height);
 };
+
+var drawSCore = function() {
+  ctx.font = "20px Courier";
+  ctx.fillStyle = "Black";
+  ctx.textAlign = "left";
+  ctx.textBaseline = "top";
+  ctx.fillText("Score: " + score, blockSize, blockSize);
+};
